@@ -6,3 +6,8 @@
      steps:
        - checkout
        - run: echo "A first hello"
+   job2:
+     docker:
+       - image: circleci/ruby:2.4.1
+     steps:
+       - run: echo "From job2"
