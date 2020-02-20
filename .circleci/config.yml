@@ -16,6 +16,14 @@ jobs:
        - image: circleci/ruby:2.4.1
      steps:
        - run: echo "From job3"
+    job4:
+     name: renamedjob4
+     requires:
+       - job3
+     docker:
+       - image: circleci/ruby:2.4.1
+     steps:
+       - run: echo "From job4"      
 workflows:
     version: 2
     workflow1:
