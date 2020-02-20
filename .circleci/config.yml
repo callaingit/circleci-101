@@ -32,5 +32,4 @@ workflows:
     workflow2:
       jobs:
         - job4
-        - job3
  
