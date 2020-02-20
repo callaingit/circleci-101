@@ -17,6 +17,7 @@
      steps:
        - run: echo "From job3"
   workflows:
+    version: 2
     workflow1:
       jobs:
         - job2
