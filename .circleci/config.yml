@@ -46,7 +46,7 @@ jobs:
        - run: env
        - run:
            command: sleep 15
-           no_output_period: 5s
+           no_output_timeout: 5s
 workflows:
     version: 2
     workflow1:
