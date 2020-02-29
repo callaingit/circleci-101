@@ -33,9 +33,9 @@ jobs:
      steps:
        - run: echo "From job3b"
        - run:
-         command: echo $CIRCLE_WORKING_DIRECTORY
-         name: 3b
-         working_directory: /tmp
+           command: echo $CIRCLE_WORKING_DIRECTORY
+           name: 3b
+           working_directory: /tmp
    job4:
      name: renamedjob4
      requires:
