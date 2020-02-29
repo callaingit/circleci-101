@@ -21,15 +21,25 @@ jobs:
        - run: ls -la ~/.ssh
        - run: cat ~/.ssh/known_hosts
        - run: cat ~/.ssh/config
-   job3:
+   job3a:
      docker:
        - image: circleci/ruby:2.4.1
      steps:
-       - run: echo "From job3"
+       - run: echo "From job3a"
+       - run echo $CIRCLE_WORKING_DIRECTORY
+   job3b:
+     docker:
+       - image: circleci/ruby:2.4.1
+     steps:
+       - run: echo "From job3b"
+       - run
+         command: echo $CIRCLE_WORKING_DIRECTORY
+         name: 3b
+         working_directory: /tmp
    job4:
      name: renamedjob4
      requires:
-       - job3
+       - job3a
      docker:
        - image: circleci/ruby:2.4.1
      steps:
@@ -38,5 +48,6 @@ workflows:
     version: 2
     workflow1:
       jobs:
-        - build
+        - job3a
+        - job3b
  
