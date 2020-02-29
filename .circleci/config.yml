@@ -11,6 +11,7 @@ jobs:
        - image: circleci/ruby:2.4.1
      steps:
        #- run: ls -la ~/.ssh
+       - run: ssh-add -l
        - add_ssh_keys
        - run: echo "From job2"
        - run: ls -la ~/.ssh
