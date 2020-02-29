@@ -43,7 +43,10 @@ jobs:
      docker:
        - image: circleci/ruby:2.4.1
      steps:
-       - run: env      
+       - run: env
+       - run:
+           command: sleep 15
+           no_output_period: 5s
 workflows:
     version: 2
     workflow1:
