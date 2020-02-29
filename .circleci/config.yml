@@ -51,6 +51,5 @@ workflows:
     version: 2
     workflow1:
       jobs:
-        - job3a
-        - job3b
+        - job4
  
