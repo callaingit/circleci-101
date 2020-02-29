@@ -9,6 +9,7 @@ jobs:
        - run: echo "A first hello"
        - run: ls -la ~/.ssh
        - run: cat ~/.ssh/known_hosts
+       - run: ssg-keygen -F circleci.com
    job2:
      docker:
        - image: circleci/ruby:2.4.1
