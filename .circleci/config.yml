@@ -56,8 +56,9 @@ workflows:
       triggers:
         - schedule:
             cron: "0 18 * * *"
-            branches:
-              only: master
+            filters:
+              branches:
+                only: master
       jobs:
         - job4
        
