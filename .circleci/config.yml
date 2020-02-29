@@ -9,6 +9,7 @@ jobs:
        - run: echo "A first hello"
        - run: ls -la ~/.ssh
        - run: cat ~/.ssh/config
+       - run: cat ~/.ssh/known_hosts
    job2:
      docker:
        - image: circleci/ruby:2.4.1
