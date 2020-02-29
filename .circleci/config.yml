@@ -26,7 +26,7 @@ jobs:
        - image: circleci/ruby:2.4.1
      steps:
        - run: echo "From job3a"
-       - run echo $(pwd) $CIRCLE_WORKING_DIRECTORY
+       - run: echo $(pwd) $CIRCLE_WORKING_DIRECTORY
    job3b:
      docker:
        - image: circleci/ruby:2.4.1
