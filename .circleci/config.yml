@@ -4,8 +4,11 @@ jobs:
      docker:
        - image: circleci/ruby:2.4.1
      steps:
+       - run: ssh-add -l
        - checkout
        - run: echo "A first hello"
+       - run: ls -la ~/.ssh
+       - run: cat ~/.ssh/config
    job2:
      docker:
        - image: circleci/ruby:2.4.1
@@ -33,5 +36,5 @@ workflows:
     version: 2
     workflow1:
       jobs:
-        - job2
+        - job1
  
