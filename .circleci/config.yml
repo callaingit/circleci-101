@@ -18,6 +18,7 @@ jobs:
        - add_ssh_keys
        - run: echo "From job2"
        - run: ls -la ~/.ssh
+       - run: cat ~/.ssh/known_hosts
        - run: cat ~/.ssh/config
    job3:
      docker:
