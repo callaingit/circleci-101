@@ -10,6 +10,7 @@ jobs:
      docker:
        - image: circleci/ruby:2.4.1
      steps:
+       - add_ssh_keys
        - run: echo "From job2"
    job3:
      docker:
@@ -29,7 +30,4 @@ workflows:
     workflow1:
       jobs:
         - job2
-    workflow2:
-      jobs:
-        - job4
  
