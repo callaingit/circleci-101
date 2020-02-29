@@ -32,7 +32,7 @@ jobs:
        - image: circleci/ruby:2.4.1
      steps:
        - run: echo "From job3b"
-       - run
+       - run:
          command: echo $CIRCLE_WORKING_DIRECTORY
          name: 3b
          working_directory: /tmp
