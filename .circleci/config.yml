@@ -47,8 +47,7 @@ jobs:
        - run:
            command: sleep 15
            no_output_timeout: 5s
-   job4:
-     name: job5
+   job5:
      steps:
        - run: echo "job5"
 workflows:
