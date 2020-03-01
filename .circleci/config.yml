@@ -62,7 +62,7 @@ workflows:
             cron: "18 * * * *"
             filters:
               branches:
-                only: master
+                only: master22
       jobs:
         - job5
     workflow2:
@@ -76,5 +76,5 @@ workflows:
             name: job6b
             filters:
               branches:
-                only: master
+                only: master22
                 
