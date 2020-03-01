@@ -57,12 +57,12 @@ jobs:
 workflows:
     version: 2
     workflow1:
-      triggers:
-        - schedule:
-            cron: "4,6,8 * * * *"
-            filters:
-              branches:
-                only: master
+#      triggers:
+#        - schedule:
+#            cron: "4,6,8 * * * *"
+#            filters:
+#              branches:
+#                only: master
       jobs:
         - job5
     workflow2:
