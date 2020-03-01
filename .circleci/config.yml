@@ -37,8 +37,6 @@ jobs:
            name: 3b
            working_directory: /tmp
    job4:
-     requires:
-       - job3a
      docker:
        - image: circleci/ruby:2.4.1
      steps:
