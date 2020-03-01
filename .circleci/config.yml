@@ -58,7 +58,7 @@ workflows:
     workflow1:
       triggers:
         - schedule:
-            cron: "10 * * * *"
+            cron: "12 * * * *"
             filters:
               branches:
                 only: master
@@ -69,11 +69,11 @@ workflows:
         - job6:
             name: job6a
             filters:
-              branches: patate
+              branches:
+                only: patate
         - job6:
             name: job6b
             filters:
-              branches: master
-              
-
-       
+              branches:
+                only: master
+                
