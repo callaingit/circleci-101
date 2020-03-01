@@ -59,7 +59,7 @@ workflows:
     workflow1:
       triggers:
         - schedule:
-            cron: "53 13 * * *"
+            cron: "59 * * * *"
             filters:
               branches:
                 only: master
