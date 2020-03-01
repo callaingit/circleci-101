@@ -45,9 +45,13 @@ jobs:
            command: sleep 15
            no_output_timeout: 5s
    job5:
+     docker:
+       - image: circleci/ruby:2.4.1
      steps:
        - run: echo "scheduled job5"
    job6:
+     docker:
+       - image: circleci/ruby:2.4.1
      steps:
        - run: echo "job6"
 workflows:
