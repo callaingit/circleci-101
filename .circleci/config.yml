@@ -37,7 +37,6 @@ jobs:
            name: 3b
            working_directory: /tmp
    job4:
-     name: renamedjob4
      requires:
        - job3a
      docker:
@@ -58,7 +57,7 @@ workflows:
     workflow1:
       triggers:
         - schedule:
-            cron: "15 * * * *"
+            cron: "18 * * * *"
             filters:
               branches:
                 only: master
