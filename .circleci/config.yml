@@ -49,16 +49,31 @@ jobs:
            no_output_timeout: 5s
    job5:
      steps:
-       - run: echo "job5"
+       - run: echo "scheduled job5"
+   job6:
+     steps:
+       - run: echo "job6"
 workflows:
     version: 2
     workflow1:
       triggers:
         - schedule:
-            cron: "10 18 * * *"
+            cron: "10 * * * *"
             filters:
               branches:
                 only: master
       jobs:
-        - job4
+        - job5
+    workflow2:
+      jobs:
+        - job6:
+            name: job6a
+            filters:
+              branches: patate
+        - job6:
+            name: job6b
+            filters:
+              branches: master
+              
+
        
