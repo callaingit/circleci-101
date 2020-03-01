@@ -74,7 +74,9 @@ workflows:
                 only: patate
         - job6:
             name: job6b
+            requires: job3b
             filters:
               branches:
-                only: master22
+                only: master
+                
                 
