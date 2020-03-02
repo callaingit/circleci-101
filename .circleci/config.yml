@@ -56,15 +56,15 @@ jobs:
        - run: echo "job6"
 workflows:
     version: 2
-    workflow1:
+#    workflow1:
 #      triggers:
 #        - schedule:
 #            cron: "4,6,8 * * * *"
 #            filters:
 #              branches:
 #                only: master
-      jobs:
-        - job5
+#      jobs:
+#        - job5
     workflow2:
       jobs:
         - job6:
@@ -75,11 +75,15 @@ workflows:
         - job3b:
             filters:
               branches:
-                only: master22          
+                only: master
+        - job3capp:
+          type: approval
+          requires: 
+            - job3b
         - job6:
             name: job6b
             requires:
-              - job3b
+              - job3capp
             filters:
               branches:
                 only: master
