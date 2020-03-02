@@ -80,6 +80,9 @@ workflows:
             type: approval
             requires: 
               - job3b
+            filters:
+              branches:
+                only: master
         - job6:
             name: job6b
             requires:
