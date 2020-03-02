@@ -82,7 +82,7 @@ workflows:
               - job3b
             filters:
               branches:
-                only: master
+                only: master22
         - job6:
             name: job6b
             requires:
