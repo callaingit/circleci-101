@@ -77,9 +77,9 @@ workflows:
               branches:
                 only: master
         - job3capp:
-          type: approval
-          requires: 
-            - job3b
+            type: approval
+            requires: 
+              - job3b
         - job6:
             name: job6b
             requires:
